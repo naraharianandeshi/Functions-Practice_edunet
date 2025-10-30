@@ -16,25 +16,45 @@
         // sub(5,4) 
 
         // Set time *
-        const add=(a,b)=> {
-        return document.write("The a and b addition is " + (a+b))
-        }
-        const sub=(a,b)=> {
-        return document.write("The a and b Subraction is " + (a-b))
-        }
-        setInterval(()=>
-        add(2,3)
-        ,3000);
-        setTimeout(()=>
-        {add(2,3)}
-        ,4000);
+        // const add=(a,b)=> {
+        // return document.write("The a and b addition is " + (a+b))
+        // }
+        // const sub=(a,b)=> {
+        // return document.write("The a and b Subraction is " + (a-b))
+        // }
+        // setInterval(()=>
+        // add(2,3)
+        // ,3000);
+        // setTimeout(()=>
+        // {add(2,3)}
+        // ,4000);
 
+        // Counter function * function inside the function *for loop *
+        const count = () => {
+            // Function to add numbers from 0 to 10
+            const add = () => {
+                for (let a = 0; a <= 10; a++) {
+                    document.write(a + "<br>");
+                }
+            };
 
+            // Counter function: print numbers from 0 to 19 as list items
+            let a = 0;
+            while (a < 20) {
+                document.write(`<ul><li>${a}</li></ul>`);
+                a++;
+            }
+
+            // Example: attach add function to a button with id 'connter'
+            // document.getElementById("connter").onclick = add;
+        }
 
     </script>
 
 </head>
 <body>
-    
+    <button onclick="setInterval(() => {
+    count()
+}, 1000); ">count</button>
 </body>
 </html>
